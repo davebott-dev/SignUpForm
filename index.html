@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1.0">
+  <title>sign-up</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--linked the custom font I used for this webpage-->
+<link href="https://fonts.cdnfonts.com/css/sansita-one-3" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container"> <!--created a parent div element that contained everything on the webpage-->
+
+    <div>  <!--created a div within that to hold the images-->
+      <img class="tropical" src="landscape-7567.gif" alt="a tropical landscape">
+       <img class="odin" src="odin-lined.png" alt="the odin project logo">
+    </div>
+
+    <div class="left"> <!--created another div that will contain all the elements on the right side of the webpage-->
+
+      <p>This is not a real online service. You know you need something like this in you life to help you realize your
+        deepest dreams. <br>Sign up to get started.</p>
+      <p>You know you want to:</p>
+
+
+      <form method="post" action="https://httpbin.org/post">
+        <fieldset>
+          <h3>Let's do this!</h3>
+          <div class="inputs"> <!--created a div within the form element to help align the inputs-->
+            <div class="row1"> <!--created two divs nested inside the .inputs div to seperate the inputs into two columns-->
+              <label for="f_name"><strong>First Name:</strong></label>
+              <input type="text" id="f_name" name="firstName" placeholder="Type" required>
+
+              <label for="email"><strong>Email:</strong></label>
+              <input class = "unfilled" type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+              <label for="password"><strong>Password:</strong></label>
+              <input type="password" id="password" name="password" placeholder="Type" required>
+            </div>
+
+
+            <div class="row2">
+              <label for="l_name"><strong>Last Name:</strong></label>
+              <input class = "unfilled" type="text" id="l_name" name="lastName" placeholder="Type" required>
+
+              <label for="p_num"><strong>Phone Number:</strong></label>
+              <input type="tel" id="p_num" name="phoneNum" placeholder="(123)-456-7890" required>
+
+              <label for="confirmPassword"><strong>Confirm Password:</strong></label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Type" required>
+            </div>
+          </div>
+          
+          <span id="alertMsg"></span> <!--created an empty span element which is where the message created in js will be displayed-->
+        </fieldset>
+
+        <button type="submit" id = "submitBtn">Create Account</button>
+
+      </form>
+
+      <span class="accountMsg">Already have an account? <a href="www.google.com">Log in</a></span>
+      <p></p>
+
+    </div>
+
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

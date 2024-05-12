@@ -1,0 +1,161 @@
+/* basic styling for the entire page and removed the webpage margin*/
+
+html {
+    height: 100%;
+    margin:0;
+    width: 100%;
+    background: white;
+    font-family: 'Sansita One', sans-serif;
+    font-size: 15px;
+  
+  }
+  body {
+    margin: 0;
+  }
+  
+  /* aligned background photo to the left-side of the webpage.
+  placed the image and the right side of the screen in separate divs
+  so they can appear on webpage side-by-side*/
+  
+  .tropical {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .container{
+    display:flex;
+    flex-direction: row;
+  }
+  
+  
+  /* aligned the paragraphs*/
+  
+  p{
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 50px;
+    font-size: 18px;
+  
+  }
+  
+  /* created some space between the last paragraph and the fieldset element
+  for visual purposes*/
+  
+  .left>p:nth-child(2) {
+    margin-bottom: 45px;
+  }
+  
+  /* aligned the form element and gave some styling to its fieldset*/
+  
+  form {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  fieldset{
+    width: 90%;
+    border-radius: 15px;
+    border-color:whitesmoke;
+    margin:20px;
+    padding: 25px;
+    box-shadow: 10px 5px 5px pink;
+  }
+  
+  /* created two columns of inputs using flex and aligned the accordingly.
+  gave all the inputs equal widths and aligned labels and inputs.*/
+  
+  .inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .row1,
+  .row2 {
+    display:flex;
+    flex-direction:column;
+  }
+  
+  input,
+  label {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 25px;
+  }
+  
+  /* styled and aligned the button element*/
+  
+  button {
+    margin-left: 350px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    height: 50px;
+    width: 200px;
+    border-radius: 2em;
+    background-color: white;
+    font-family: 'Sansita One', sans-serif;
+  }
+  
+  /* styled and aligned the 'already have an account' message below the 
+  button element*/
+  
+  a {
+  text-decoration:none;
+    color: hotpink
+  }
+  
+  .accountMsg {
+    margin-left: 380px;
+  }
+  
+  /* gave hover effects to the button and the inputs*/
+  
+  button:hover {
+    height: 60px;
+    width: 210px;
+  }
+  
+  input:hover {
+    background-color: #f9e6e9;
+    color: #2e2e2e;
+    box-shadow: 4px 4px 7px gray; 
+  }
+  
+  /* when user has clicked an input but their input is invalid/not yet valid the outline will appear red and input background will be ivory*/
+  
+  input:focus:invalid {
+    outline: 2px solid red; 
+    border-radius: 5px;
+    background:ivory;
+  }
+  
+  /* when user has inputted a valid value the border will turn green and the input background will turn light-green (this does not apply for the password and confirm password inputs)*/
+  
+  input:not(#password, #confirmPassword):valid {
+    border: 2px solid green; 
+    background-color: lightgreen;
+    border-radius: 5px;
+  }
+  
+  /* aligns the alert message that pops up when the passwords match/do not match*/
+  
+  #alertMsg{
+    margin-left:470px;
+  }
+  
+  /*added the odin project logo on top of background image*/
+  
+  .odin {
+    position: relative;
+    height:50px;
+    width: 50px;
+    bottom: 710px;
+  }
